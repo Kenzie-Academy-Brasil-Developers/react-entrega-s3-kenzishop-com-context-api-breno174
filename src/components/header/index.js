@@ -1,6 +1,6 @@
 import "./style.css";
 //import { AiOutlineShop } from "react-icons/all";
-import { BiCart } from "react-icons/bi";
+//import { BiCart } from "react-icons/bi";
 import { Link } from "react-router-dom";
 
 function Header({ setWindow }) {
@@ -15,7 +15,7 @@ function Header({ setWindow }) {
       </div>
       <div>
         <div id="icon">
-          Compras: <BiCart onClick={() => setWindow(true)} />
+          Compras:
           <Link to="/login">Login</Link>
         </div>
       </div>

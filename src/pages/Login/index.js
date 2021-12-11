@@ -8,7 +8,7 @@ import * as yup from "yup";
 import TextField from "@mui/material/TextField";
 //Styles
 import { Container, Content, AnimationContainer, Botao } from "./styled";
-import { toast } from "react-hot-toast";
+//import { toast } from "react-hot-toast";
 
 function Login() {
   const history = useHistory();

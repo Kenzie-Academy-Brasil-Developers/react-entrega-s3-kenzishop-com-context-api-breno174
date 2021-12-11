@@ -1,5 +1,5 @@
 import "./style.css";
-import { addCarrinho } from "../../store/modules/car/actions";
+//import { addCarrinho } from "../../store/modules/car/actions";
 //import { useDispatch } from "react-redux";
 import { useCarrinho } from "../../providers/carrinho";
 

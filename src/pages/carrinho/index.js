@@ -1,6 +1,6 @@
-import { useDispatch, useSelector } from "react-redux";
+//import { useDispatch, useSelector } from "react-redux";
 import Compras from "../../components/compras";
-import { esvaziar, remCarrinho } from "../../store/modules/car/actions";
+//import { esvaziar, remCarrinho } from "../../store/modules/car/actions";
 import { Content, Counteiner, Heade, Card, Button, Back } from "./style";
 import { useCarrinho } from "../../providers/carrinho";
 

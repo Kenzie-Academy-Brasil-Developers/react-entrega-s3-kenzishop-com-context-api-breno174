@@ -1,7 +1,7 @@
 //import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Home from "../pages/home";
-import Carrinho from "../pages/carrinho";
+//import Carrinho from "../pages/carrinho";
 import Header from "../components/header";
 import Login from "../pages/Login";
 import { useState } from "react";
