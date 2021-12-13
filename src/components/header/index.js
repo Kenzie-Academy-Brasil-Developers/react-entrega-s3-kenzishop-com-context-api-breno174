@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 function Header({ setWindow, funcao }) {
   const [procurados, setProcurados] = useState("");
+  console.log(procurados);
 
   return (
     <header className="App-header">
@@ -20,7 +21,10 @@ function Header({ setWindow, funcao }) {
           placeholder="procurar por produto"
           onChange={(evt) => setProcurados(evt.target.value)}
         />
-        <button id="submit" onClick={() => funcao(procurados)}>
+        <button
+          id="submit"
+          //onClick={() => funcao(procurados)}
+        >
           Search
         </button>
       </div>
