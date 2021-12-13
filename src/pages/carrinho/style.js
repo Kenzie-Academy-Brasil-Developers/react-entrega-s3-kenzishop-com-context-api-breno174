@@ -12,6 +12,10 @@ export const Counteiner = styled.aside`
   top: 0px;
   right: 0px;
   color: whitesmoke;
+  overflow-y: auto;
+  #car {
+    overflow-y: auto;
+  }
 `;
 
 export const Back = styled.section`
@@ -35,7 +39,7 @@ export const Heade = styled.div`
 export const Content = styled.section`
   box-sizing: border-box;
   max-height: 550px;
-  width: 100%;
+  width: 97%;
   margin: 2px 3px;
   margin-bottom: 25px;
   padding: 3px;
@@ -70,8 +74,8 @@ export const Card = styled.div`
   .car-price {
   }
   .car-image {
-    width: 60px;
-    height: 40px;
+    width: 40px;
+    height: 50px;
     margin-right: 10px;
   }
   .car-title {

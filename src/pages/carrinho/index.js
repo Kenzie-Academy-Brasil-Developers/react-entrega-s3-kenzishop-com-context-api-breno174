@@ -8,10 +8,13 @@ function Carrinho({ window, setWindow }) {
   //
   //const dispatch = useDispatch();
   // const carrinho = useSelector((store) => store.car);
-  const { carrinho } = useCarrinho();
+  const { carrinho, esvaziar, remCarrinho } = useCarrinho();
 
   console.log(carrinho, "carrinho");
-  const reducer = (acc, cur) => acc + cur.price;
+  function reducer(acc, cur) {
+    return acc + cur.price;
+  }
+  console.log(reducer);
   const total = carrinho.reduce(reducer, 0);
 
   return (
@@ -35,31 +38,30 @@ function Carrinho({ window, setWindow }) {
           </Content>
         ) : (
           <>
-            {carrinho.map((prod, index) => (
-              <Content key={index}>
-                <Card>
-                  <div className="car-image">{prod.img}imagem</div>
-                  <div className="car-description">
-                    <p className="car-title">{prod.name}</p>
-                    <p className="car-price">R$: {prod.price}</p>
-                  </div>
-                  <button
-                    className="card-remove"
-                    //onClick={() => dispatch(remCarrinho(prod))}
-                  >
-                    X
-                  </button>
-                </Card>
-              </Content>
-            ))}
+            <div id="car">
+              {carrinho.map((prod, index) => (
+                <Content key={index}>
+                  <Card>
+                    <img alt="foto" src={prod.img} className="car-image" />
+                    <div className="car-description">
+                      <p className="car-title">{prod.name}</p>
+                      <p className="car-price">R$: {prod.price}</p>
+                    </div>
+                    <button
+                      className="card-remove"
+                      onClick={() => remCarrinho(prod)}
+                    >
+                      X
+                    </button>
+                  </Card>
+                </Content>
+              ))}
+            </div>
             <div id="total">
               <u>Total: R$ {total.toFixed(2)}</u>
             </div>
-            <Button
-            //onClick={() =>  dispatch(esvaziar())}
-            >
-              Esvaziar carrinho
-            </Button>
+            <Button onClick={() => esvaziar()}>Esvaziar carrinho</Button>
+	    <Button>Comprar</Button>
           </>
         )}
       </Counteiner>

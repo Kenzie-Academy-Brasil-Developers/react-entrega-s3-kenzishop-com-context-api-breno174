@@ -10,7 +10,18 @@ const CarrinhoProvider = ({ children }) => {
   const [carrinho, setCarrinho] = useState([]);
   //funções
   const addCarrinho = (produto) => {
-    setCarrinho(...produto);
+    console.log(carrinho);
+    setCarrinho([...carrinho, produto]);
+  };
+
+  const remCarrinho = (produto) => {
+    console.log(produto);
+    setCarrinho(carrinho.filter((elm) => elm.name !== produto));
+  };
+
+  const esvaziar = () => {
+    setCarrinho([]);
+    console.log("esvaziar carrinho");
   };
 
   //*estrutura báse
@@ -18,6 +29,8 @@ const CarrinhoProvider = ({ children }) => {
     <CarrinhoContext.Provider
       value={{
         addCarrinho,
+        remCarrinho,
+        esvaziar,
         carrinho,
       }}
     >

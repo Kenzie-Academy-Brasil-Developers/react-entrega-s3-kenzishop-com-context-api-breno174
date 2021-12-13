@@ -2,15 +2,37 @@
   font-size: 2rem;
 }
 
+#link {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
 .label {
+}
+#submit {
+  padding: 5px 9px;
+  font-weight: 700;
+  color: white;
+  background-color: var(--ligth-black-blue);
+  border: none;
+}
+#search {
   padding: 5px 10px;
   margin: 0px 12px;
 }
 
-#search {
-}
-
 #icon {
   cursor: pointer;
+  width: 90px;
+  display: flex;
+  justify-content: space-around;
   /* color: rgba(0, 0, 0, 0.322); */
+}
+
+@media (min-width: 320px) and (max-width: 720px) {
+  #box-search {
+    display: flex;
+    flex-direction: column;
+  }
 }
