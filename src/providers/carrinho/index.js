@@ -16,7 +16,8 @@ const CarrinhoProvider = ({ children }) => {
 
   const remCarrinho = (produto) => {
     console.log(produto);
-    setCarrinho(carrinho.filter((elm) => elm.name !== produto));
+    const newarray = carrinho.filter((elm) => elm.name !== produto.name);
+    setCarrinho(newarray);
   };
 
   const esvaziar = () => {
